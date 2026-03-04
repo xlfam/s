@@ -24,16 +24,6 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🚀 手动切换
       - DIRECT
-  - name: 🛑 广告拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
   - name: 🇭🇰 香港节点
     include-all: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
@@ -46,6 +36,16 @@ proxy-groups:
     type: url-test
     interval: 300
     tolerance: 50
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
 
 rule-providers:
   LocalAreaNetwork:
@@ -119,4 +119,5 @@ rules:
   - "RULE-SET,Telegram,📲 电报消息"
   - "GEOIP,CN,DIRECT"
   - "MATCH,🚀 节点选择"
+
 
