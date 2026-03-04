@@ -111,6 +111,7 @@ rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "DOMAIN-SUFFIX,xlfam.top,DIRECT"
   - "DOMAIN-SUFFIX,fnos.net,DIRECT"
+  - "DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
   - "RULE-SET,ChinaDomain,DIRECT"
@@ -119,5 +120,6 @@ rules:
   - "RULE-SET,Telegram,📲 电报消息"
   - "GEOIP,CN,DIRECT"
   - "MATCH,🚀 节点选择"
+
 
 
