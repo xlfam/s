@@ -24,12 +24,6 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🚀 手动切换
       - DIRECT
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
   - name: 🛑 广告拦截
     type: select
     proxies:
@@ -39,15 +33,6 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇺🇲 美国节点
-      - 🚀 手动切换
       - DIRECT
   - name: 🇭🇰 香港节点
     include-all: true
@@ -66,13 +51,6 @@ rule-providers:
   LocalAreaNetwork:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
     path: ./ruleset/LocalAreaNetwork.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  UnBan:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/UnBan.list
-    path: ./ruleset/UnBan.list
     behavior: classical
     interval: 86400
     format: text
@@ -128,16 +106,17 @@ rule-providers:
     type: http
 
 rules:
-  - "PROCESS-NAME,subs-check.exe,🎯 全球直连"
-  - "PROCESS-NAME,subs-check,🎯 全球直连"
-  - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
-  - "RULE-SET,UnBan,🎯 全球直连"
+  - "PROCESS-NAME,subs-check.exe,DIRECT"
+  - "PROCESS-NAME,subs-check,DIRECT"
+  - "RULE-SET,LocalAreaNetwork,DIRECT"
+  - "DOMAIN-SUFFIX,xlfam.top,DIRECT"
+  - "DOMAIN-SUFFIX,fnos.net,DIRECT"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
+  - "RULE-SET,ChinaDomain,DIRECT"
+  - "RULE-SET,ChinaCompanyIp,DIRECT"
+  - "RULE-SET,Download,DIRECT"
   - "RULE-SET,Telegram,📲 电报消息"
-  - "RULE-SET,ProxyGFWlist,🚀 节点选择"
-  - "RULE-SET,ChinaDomain,🎯 全球直连"
-  - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
-  - "RULE-SET,Download,🎯 全球直连"
-  - "GEOIP,CN,🎯 全球直连"
-  - "MATCH,🐟 漏网之鱼"
+  - "GEOIP,CN,DIRECT"
+  - "MATCH,🚀 节点选择"
+
