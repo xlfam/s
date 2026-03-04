@@ -1,0 +1,8 @@
+# 个人直连地址
+# 参考：https://en.wikipedia.org/wiki/Reserved_IP_addresses
+
+# ACL4SSR标志 如没有，代表不是用ACL4SSR规则
+DOMAIN-SUFFIX,acl4.ssr
+
+# 直连地址
+DOMAIN-SUFFIX,xlfam.top
