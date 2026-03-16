@@ -111,7 +111,7 @@ rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "DOMAIN-SUFFIX,xlfam.top,DIRECT"
   - "DOMAIN-SUFFIX,fnos.net,DIRECT"
-  - "DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT"
+  - "DOMAIN,raw.githubusercontent.com,DIRECT"
   - "PROCESS-NAME,acad.exe,DIRECT"
   - "DOMAIN-SUFFIX,autodesk.com,DIRECT"
   - "PROCESS-NAME,Photoshop.exe,DIRECT"
